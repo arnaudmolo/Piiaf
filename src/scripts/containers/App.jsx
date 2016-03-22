@@ -7,7 +7,8 @@ import routes from '../routes';
 const styles = StyleSheet.create({
   navigator: {
     flex: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#000',
+    opacity: 0.5
   },
   sceneStyle: {
     overflow: 'visible',
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 6,
     backgroundColor: '#000',
-    paddingTop: 64
+    // paddingTop: 64
   },
   ctn: {
     flex: 1,
