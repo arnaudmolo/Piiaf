@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 6,
     backgroundColor: '#000',
-    // paddingTop: 64
+    paddingTop: 64
   },
   ctn: {
     flex: 1,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export default class App extends Component{
+export default class App extends Component {
 
     /**
      * Render
