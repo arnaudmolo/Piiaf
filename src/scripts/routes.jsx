@@ -1,4 +1,4 @@
-import React, { TouchableOpacity, View, Text, StyleSheet } from 'react-native'
+import React, { TouchableOpacity, View, Text, StyleSheet, Image, Button } from 'react-native'
 import ExNavigator from '@exponent/react-native-navigator'
 
 const routes = {};
@@ -24,7 +24,7 @@ routes.getHomeRoute = () => ({
       <TouchableOpacity
         touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
         style={ExNavigator.Styles.barLeftButton}>
-        <Text style={ExNavigator.Styles.barLeftButtonText}>Hamburger !</Text>
+        <Image source={require('./../components/Player/business.png')} style={{ width: 20, height: 20, left: 10, top: 10}} />
       </TouchableOpacity>
     );
   },
@@ -35,7 +35,7 @@ routes.getHomeRoute = () => ({
         touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
         onPress={() => navigator.push(routes.getListRoute())}
         style={ExNavigator.Styles.barRightButton}>
-        <Text style={ExNavigator.Styles.barRightButtonText}>Help</Text>
+        <Image source={require('./../components/Player/list.png')} style={{ width: 20, height: 20, right: 10, top: 10}} />
       </TouchableOpacity>
     );
   },
