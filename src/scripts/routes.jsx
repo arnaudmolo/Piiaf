@@ -9,6 +9,8 @@ const styles = StyleSheet.create({
   }
 })
 
+const Title = () =>
+  <Image source={require('./containers/logo-w.png')} style={{ width: 70, height: 20, top: 10}} />
 /**
  * Homepage
  *
@@ -40,9 +42,7 @@ routes.getHomeRoute = () => ({
     );
   },
 
-  getTitle() {
-    return 'Piiaf'
-  }
+  renderTitle: Title
 
 });
 
@@ -50,9 +50,7 @@ routes.getListRoute = () => ({
   getSceneClass () {
     return require('../components/List/').default
   },
-  getTitle () {
-    return 'List'
-  }
+  renderTitle: Title
 })
 
 export default routes;

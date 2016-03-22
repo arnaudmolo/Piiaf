@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
 
 const Player = props => {
   const url = 'http://94.247.179.59/img/1.JPG?r=' + Math.random()
-  console.log(url)
   return (
     <View style={styles.container}>
       <EffectsView
