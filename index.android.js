@@ -3,4 +3,6 @@
  * https://github.com/facebook/react-native
  */
 
-import './src/index'
+import AppLaunch from './src/index'
+
+AppLaunch()
