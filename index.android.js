@@ -1,1 +1,6 @@
-import app from './src/';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
+
+import './src/index'

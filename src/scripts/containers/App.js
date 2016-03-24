@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export default class App extends Component {
+export default class Piiaf extends Component {
 
     /**
      * Render
