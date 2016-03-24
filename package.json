@@ -1,42 +1,12 @@
 {
-  "name": "react-native-redux-starter-kit",
-  "version": "1.0.0-rc",
-  "description": "Get started with React Native and Redux.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LeoLeBras/react-native-redux-starter-kit"
-  },
-  "author": "Léo LE BRAS <leo.lebrasf@gmail.com> (http://github.com/LeoLeBras)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LeoLeBras/react-native-redux-starter-kit/issues"
-  },
+  "name": "Piiaf",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh",
-    "build": "react-native bundle",
-    "test": "eslint src",
-    "android-setup-port": "adb reverse tcp:8081 tcp:8080",
-    "remotedev": "remotedev-debugger --hostname localhost --port 5678 --runserver"
-  },
-  "engines": {
-    "node": ">=4",
-    "npm": ">=2 <4"
+    "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "@exponent/react-native-navigator": "^0.4.1",
-    "immutable": "^3.7.5",
-    "react-native": "^0.19.0",
-    "react-native-effects-view": "^0.3.0",
-    "react-redux": "^4.4.0",
-    "redux": "^3.3.0",
-    "redux-thunk": "^1.0.3"
-  },
-  "devDependencies": {
-    "babel-core": "^6.3.17",
-    "babel-preset-react-native": "^1.4.0",
-    "babel-preset-stage-0": "^6.3.13",
-    "remote-redux-devtools": "^0.1.1",
-    "remote-redux-devtools-on-debugger": "^0.2.4",
-    "remotedev-server": "0.0.1"
+    "react": "^0.14.7",
+    "react-native": "^0.22.2"
   }
 }
