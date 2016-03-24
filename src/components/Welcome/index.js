@@ -1,11 +1,10 @@
 import React, { View, Text, Image } from 'react-native'
 import Player from './../Player'
 
-const Welcome = () => (
+const Welcome = () =>
     <View style={ styles.container }>
       <Player />
     </View>
-);
 
 const styles = {
     container: {
