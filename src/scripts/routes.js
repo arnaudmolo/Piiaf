@@ -53,4 +53,11 @@ routes.getListRoute = () => ({
   renderTitle: Title
 })
 
+routes.getArticles = () =>({
+  getSceneClass () {
+    return require('../components/Article').default
+  },
+  renderTitle: Title
+})
+
 export default routes;
