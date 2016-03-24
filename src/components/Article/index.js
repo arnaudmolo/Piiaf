@@ -1,14 +1,5 @@
 'use strict'
-import React, {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  View,
-  WebView,
-  Dimensions
-} from 'react-native'
+import React, { WebView } from 'react-native'
 
 const DEFAULT_URL = 'http://dev.piiaf.com/article/787-moh-fier-repr-sentant-de-la-cit-phoc-enne-en-interview-dans-vision-d-cal-e'
 

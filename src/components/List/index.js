@@ -1,6 +1,6 @@
 import React, { Image, View, Text, ListView, TouchableHighlight, StyleSheet, Dimensions, ScrollView } from 'react-native'
 
-const temporary = (new Array(50)).fill().map((_, i) => `Ligne ${i + 1}`)
+const temporary = (new Array(10)).fill().map((_, i) => `Ligne ${i + 1}`)
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 ==! r2})
 const dataSource = ds.cloneWithRows(temporary)
 
@@ -35,38 +35,31 @@ const styles = StyleSheet.create({
   },
 })
 
-const Separator = (sectionID, rowID) => {
-  return (
-    <View key={`${sectionID}-${rowID}`} style={styles.separatorContainer} ><View style={styles.separator} /></View>
-  )
-}
+const Separator = (sectionID, rowID) =>
+  <View key={`${sectionID}-${rowID}`} style={styles.separatorContainer} >
+    <View style={styles.separator} />
+  </View>
 
-const Row = (rowData, sectionID, rowID) => {
-  return (
-    <TouchableHighlight onPress={e => console.log(rowID)}>
+const Row = (rowData, sectionID, rowID) =>
+  <TouchableHighlight onPress={e => console.log(rowID)}>
+    <View style={styles.row}>
       <View style={styles.row}>
-        <View style={styles.row}>
-          <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={styles.thumb} />
-          <Text style={styles.text}>
-            {rowData}
-          </Text>
-        </View>
+        <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={styles.thumb} />
+        <Text style={styles.text}>
+          {rowData}
+        </Text>
       </View>
-    </TouchableHighlight>
-  )
-}
+    </View>
+  </TouchableHighlight>
 
-const List = (props) => {
-  return (
-    <ScrollView>
-      <ListView
-        style={styles.listContainer}
-        dataSource={dataSource}
-        renderRow={Row}
-        renderSeparator={Separator}
-      />
-    </ScrollView>
-  )
-}
+const List = (props) =>
+  <ScrollView>
+    <ListView
+      style={styles.listContainer}
+      dataSource={dataSource}
+      renderRow={Row}
+      renderSeparator={Separator}
+    />
+  </ScrollView>
 
 export default List;
