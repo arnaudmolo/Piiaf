@@ -3,7 +3,7 @@ import EffectsView from 'react-native-effects-view'
 
 import ToggleButton from './toggle-button'
 
-const {height, width} = Dimensions.get('window');
+const {height, width} = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   bluredView: {

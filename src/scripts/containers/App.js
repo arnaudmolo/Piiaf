@@ -41,6 +41,7 @@ export default class Piiaf extends Component {
      * @return {jsx} Render <Provider /> component
      */
     render () {
+      console.log('ouoi tu rend ?')
         return (
             <Provider store={ configureStore() }>
               <View style={styles.ctn}>
