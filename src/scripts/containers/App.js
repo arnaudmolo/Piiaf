@@ -1,8 +1,10 @@
-import React, { Component, StyleSheet, View } from 'react-native';
-import { Provider } from 'react-redux';
-import ExNavigator from '@exponent/react-native-navigator';
-import configureStore from '../configStore';
-import routes from '../routes';
+import React, { Component, StyleSheet, View } from 'react-native'
+import { Provider } from 'react-redux'
+import ExNavigator from '@exponent/react-native-navigator'
+import configureStore from '../configStore'
+import routes from '../routes'
+
+import SpashScreen from '@remobile/react-native-splashscreen'
 
 const styles = StyleSheet.create({
   navigator: {
@@ -29,6 +31,10 @@ const styles = StyleSheet.create({
 
 export default class Piiaf extends Component {
 
+  componentDidMount () {
+    SpashScreen.hide()
+  }
+
     /**
      * Render
      *
@@ -44,6 +50,6 @@ export default class Piiaf extends Component {
                   sceneStyle={styles.sceneStyle} />
               </View>
             </Provider>
-        );
+        )
     }
 }

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
+#import "RCTSplashScreen.h"
 
 @implementation AppDelegate
 
@@ -47,6 +48,8 @@
                                                       moduleName:@"Piiaf"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
+  
+  [RCTSplashScreen show:rootView];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
