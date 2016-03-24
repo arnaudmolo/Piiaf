@@ -34,26 +34,8 @@ const WebViewExample = React.createClass({
 })
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    top: 14,
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: -64
-  },
   webView: {
     backgroundColor: BGWASH,
-    height: Dimensions.get('window').height + 64 + 50,
-    position: 'relative'
-  },
-  top: {
-    backgroundColor: '#000',
-    height: 50,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0
   }
 })
 
