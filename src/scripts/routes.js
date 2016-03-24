@@ -35,7 +35,7 @@ routes.getHomeRoute = () => ({
     return (
       <TouchableOpacity
         touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
-        onPress={() => navigator.push(routes.getArticles())}
+        onPress={() => navigator.push(routes.getListRoute())}
         style={ExNavigator.Styles.barRightButton}>
         <Image source={require('./../components/Player/list.png')} style={{ width: 20, height: 20, right: 10, top: 10}} />
       </TouchableOpacity>
@@ -54,9 +54,10 @@ routes.getListRoute = () => ({
 })
 
 routes.getArticles = () =>({
-    getSceneClass () {
-        return require('../components/Article').default
-    }
+  getSceneClass () {
+    return require('../components/Article').default
+  },
+  renderTitle: Title
 })
 
 export default routes;
