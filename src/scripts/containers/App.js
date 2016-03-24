@@ -1,4 +1,4 @@
-import React, { Component, StyleSheet, View } from 'react-native';
+import React, { Component, StyleSheet, View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 import ExNavigator from '@exponent/react-native-navigator';
 import configureStore from '../configStore';
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export default class App extends Component {
+export default class Piiaf extends Component {
 
     /**
      * Render

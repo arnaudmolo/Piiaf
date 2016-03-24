@@ -1,1 +1,4 @@
-export bar from './bar';
+import bar from './bar'
+export default {
+  bar
+}
