@@ -11,6 +11,7 @@
     "react": "^0.14.7",
     "react-native": "^0.22.2",
     "react-native-effects-view": "github:voronianski/react-native-effects-view",
+    "react-native-side-menu": "^0.18.0",
     "react-redux": "^4.4.1",
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1"

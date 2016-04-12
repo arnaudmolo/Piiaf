@@ -1,5 +1,7 @@
 import React, { View, Text, Image } from 'react-native'
 import Player from './../Player'
+import SideMenu from 'react-native-side-menu'
+import Timeline from './../../scripts/containers/Timeline'
 
 const Welcome = () =>
     <View style={ styles.container }>
@@ -24,4 +26,15 @@ const styles = {
     }
 };
 
-export default Welcome;
+class App extends React.Component {
+  render () {
+    const menu = <Timeline />
+    return (
+      <SideMenu menu={menu} isOpen>
+        <Welcome />
+      </SideMenu>
+    )
+  }
+}
+
+export default App;

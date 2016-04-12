@@ -35,22 +35,21 @@ export default class Piiaf extends Component {
     SpashScreen.hide()
   }
 
-    /**
-     * Render
-     *
-     * @return {jsx} Render <Provider /> component
-     */
-    render () {
-      console.log('ouoi tu rend ?')
-        return (
-            <Provider store={ configureStore() }>
-              <View style={styles.ctn}>
-                <ExNavigator
-                  initialRoute={ routes.getHomeRoute() }
-                  navigationBarStyle={styles.navigator}
-                  sceneStyle={styles.sceneStyle} />
-              </View>
-            </Provider>
-        )
-    }
+  /**
+   * Render
+   *
+   * @return {jsx} Render <Provider /> component
+   */
+  render () {
+    return (
+      <Provider store={ configureStore() }>
+        <View style={styles.ctn}>
+          <ExNavigator
+            initialRoute={ routes.getHomeRoute() }
+            navigationBarStyle={styles.navigator}
+            sceneStyle={styles.sceneStyle} />
+        </View>
+      </Provider>
+    )
+  }
 }

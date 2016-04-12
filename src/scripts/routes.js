@@ -1,5 +1,6 @@
 import React, { TouchableOpacity, View, Text, StyleSheet, Image, Button } from 'react-native'
 import ExNavigator from '@exponent/react-native-navigator'
+import Timeline from './containers/Timeline'
 
 const routes = {};
 
@@ -25,6 +26,7 @@ routes.getHomeRoute = () => ({
     return (
       <TouchableOpacity
         touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
+        onPress={() => navigator.push(routes.getTimeline())}
         style={ExNavigator.Styles.barLeftButton}>
         <Image source={require('./../components/Player/business.png')} style={{ width: 20, height: 20, left: 10, top: 10}} />
       </TouchableOpacity>
@@ -53,9 +55,16 @@ routes.getListRoute = () => ({
   renderTitle: Title
 })
 
-routes.getArticles = () =>({
+routes.getArticles = () => ({
   getSceneClass () {
     return require('../components/Article').default
+  },
+  renderTitle: Title
+})
+
+routes.getTimeline = () => ({
+  getSceneClass () {
+    return Timeline
   },
   renderTitle: Title
 })

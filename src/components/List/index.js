@@ -7,7 +7,7 @@ const dataSource = ds.cloneWithRows(temporary)
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     padding: 10,
     backgroundColor: '#000',
   },
