@@ -3,30 +3,32 @@ import React, { Image, View, Text, ListView, TouchableHighlight, StyleSheet, Dim
 const temporary = (new Array(10)).fill().map((_, i) => `Ligne ${i + 1}`)
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 ==! r2})
 const dataSource = ds.cloneWithRows(temporary)
+const scale = Dimensions.get('window').scale
 
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    padding: 10,
+    paddingTop: 1,
+    paddingBottom: 1,
     backgroundColor: '#000',
   },
   listContainer: {
     backgroundColor: '#000',
-    paddingLeft: 5,
-    paddingRight: 5
+    paddingLeft: 25 / scale,
+    paddingRight: 5 / scale
   },
   separator: {
     height: 1,
-    backgroundColor: '#CCCCCC'
+    backgroundColor: '#FFF'
   },
   separatorContainer: {
     height: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#FFF'
   },
   thumb: {
-    width: 64,
-    height: 64,
+    width: 85 / scale,
+    height: 85 / scale,
     backgroundColor: '#CCCCCC'
   },
   text: {
