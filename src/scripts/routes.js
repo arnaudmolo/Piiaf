@@ -54,6 +54,7 @@ routes.getHomeRoute = (store) => ({
 routes.getListRoute = () => ({
   getSceneClass () {
     return require('../components/List/').default
+    // return require('./containers/Timeline').default
   },
   renderTitle: Title
 })

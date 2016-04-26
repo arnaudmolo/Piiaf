@@ -12,7 +12,6 @@ export function openMenu () {
 }
 
 export function closeMenu () {
-  console.log('open menu!');
   return {
     type: actionTypes.CLOSE_MENU
   }

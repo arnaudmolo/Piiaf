@@ -53,7 +53,7 @@ const Row = (rowData, sectionID, rowID) =>
   </TouchableHighlight>
 
 const List = (props) =>
-  <ScrollView>
+  <ScrollView style={props.style}>
     <ListView
       style={styles.listContainer}
       dataSource={dataSource}

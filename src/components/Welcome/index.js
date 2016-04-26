@@ -1,6 +1,6 @@
-import React, { View, Text, Image } from 'react-native'
+import React, { View, Text, Image, Dimensions } from 'react-native'
 import Player from './../Player'
-import SideMenu from './../../scripts/containers/Sidebar'
+import Sidebar from './../../scripts/containers/Sidebar'
 import Timeline from './../../scripts/containers/Timeline'
 
 const Welcome = () =>
@@ -26,7 +26,13 @@ const styles = {
     }
 }
 
-export default (props) =>
-  <SideMenu menu={<Timeline />}>
+export default (props) => {
+  const {width, scale} = Dimensions.get('window')
+  const size = width - 20 * scale
+  return <Sidebar
+    menu={<Timeline width={size} />}
+    openMenuOffset={size}
+  >
     <Welcome />
-  </SideMenu>
+  </Sidebar>
+}
