@@ -4,35 +4,26 @@ import Sidebar from './../../scripts/containers/Sidebar'
 import Timeline from './../../scripts/containers/Timeline'
 
 const Welcome = () =>
-    <View style={ styles.container }>
-      <Player />
-    </View>
+  <View style={ styles.container }>
+    <Player />
+  </View>
 
 const styles = {
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 10
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 10
+  }
 }
 
-export default (props) => {
-  const {width, scale} = Dimensions.get('window')
-  const size = width - 20 * scale
-  return <Sidebar
-    menu={<Timeline width={size} />}
-    openMenuOffset={size}
-  >
-    <Welcome />
-  </Sidebar>
-}
+export default Welcome

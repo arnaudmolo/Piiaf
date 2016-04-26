@@ -26,11 +26,11 @@ routes.getHomeRoute = (store) => ({
     return require('../components/Welcome/').default
   },
 
-  renderLeftButton() {
+  renderLeftButton(navigator) {
     return (
       <TouchableOpacity
         touchRetentionOffset={Ex.Styles.barButtonTouchRetentionOffset}
-        onPress={() => store.dispatch(toggleMenu())}
+        onPress={() => navigator.push(routes.getTimeline())}
         style={Ex.Styles.barLeftButton}>
         <Image source={require('./../components/Player/business.png')} style={{ width: 20, height: 20, left: 10, top: 10}} />
       </TouchableOpacity>
@@ -45,7 +45,7 @@ routes.getHomeRoute = (store) => ({
         style={Ex.Styles.barRightButton}>
         <Image source={require('./../components/Player/list.png')} style={{ width: 20, height: 20, right: 10, top: 10}} />
       </TouchableOpacity>
-    );
+    )
   },
 
   renderTitle: Title
@@ -54,7 +54,6 @@ routes.getHomeRoute = (store) => ({
 routes.getListRoute = () => ({
   getSceneClass () {
     return require('../components/List/').default
-    // return require('./containers/Timeline').default
   },
   renderTitle: Title
 })

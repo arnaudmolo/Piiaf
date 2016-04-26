@@ -9,8 +9,8 @@ import SpashScreen from '@remobile/react-native-splashscreen'
 const styles = StyleSheet.create({
   navigator: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0)',
-    borderColor: 'rgba(0,0,0,0)',
+    backgroundColor: '#000',
+    borderColor: '#000',
     borderWidth: 0
   },
   sceneStyle: {
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     backgroundColor: '#000',
     paddingTop: 64,
-    borderColor: 'rgba(0,0,0,0)',
+    borderColor: '#000',
     borderWidth: 0
   },
   ctn: {

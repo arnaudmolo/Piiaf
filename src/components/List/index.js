@@ -1,6 +1,7 @@
 import React, { Image, View, Text, ListView, TouchableHighlight, StyleSheet, Dimensions, ScrollView } from 'react-native'
+import {gray, lightGray, ultraLightGray} from './../../colors'
 
-const temporary = (new Array(10)).fill().map((_, i) => `Ligne ${i + 1}`)
+const temporary = (new Array(10)).fill().map((_, i) => ({title: `Ligne ${i + 1}`, artist: 'Artiste'}))
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 ==! r2})
 const dataSource = ds.cloneWithRows(temporary)
 const scale = Dimensions.get('window').scale
@@ -11,45 +12,53 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingTop: 1,
     paddingBottom: 1,
-    backgroundColor: '#000',
-  },
-  listContainer: {
-    backgroundColor: '#000',
-    paddingLeft: 25 / scale,
-    paddingRight: 5 / scale
+    backgroundColor: gray,
+    flex: 1
   },
   separator: {
     height: 1,
-    backgroundColor: '#FFF'
+    backgroundColor: lightGray
   },
   separatorContainer: {
-    height: 1,
-    backgroundColor: '#FFF'
+    height: 1
   },
   thumb: {
     width: 85 / scale,
     height: 85 / scale,
     backgroundColor: '#CCCCCC'
   },
-  text: {
+  title: {
     flex: 1,
-    color: '#CCCCCC'
+    color: '#FFF',
+    fontWeight: "600"
   },
+  artist: {
+    flex: 1,
+    color: ultraLightGray,
+    fontSize: 30 / scale
+  },
+  textContainer: {
+    paddingLeft: 25 / scale,
+    paddingTop: 4 / scale
+  }
 })
 
 const Separator = (sectionID, rowID) =>
-  <View key={`${sectionID}-${rowID}`} style={styles.separatorContainer} >
-    <View style={styles.separator} />
-  </View>
+  <View key={`${sectionID}-${rowID}`} style={styles.separator} />
 
 const Row = (rowData, sectionID, rowID) =>
   <TouchableHighlight onPress={e => console.log(rowID)}>
     <View style={styles.row}>
       <View style={styles.row}>
-        <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={styles.thumb} />
-        <Text style={styles.text}>
-          {rowData}
-        </Text>
+        <Image source={{uri: 'https://beerhold.it/85/85'}} style={styles.thumb} />
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>
+            {rowData.title}
+          </Text>
+          <Text style={styles.artist}>
+            {rowData.artist}
+          </Text>
+        </View>
       </View>
     </View>
   </TouchableHighlight>
@@ -57,7 +66,6 @@ const Row = (rowData, sectionID, rowID) =>
 const List = (props) =>
   <ScrollView style={props.style}>
     <ListView
-      style={styles.listContainer}
       dataSource={dataSource}
       renderRow={Row}
       renderSeparator={Separator}
