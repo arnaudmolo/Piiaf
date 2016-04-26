@@ -1,4 +1,4 @@
-import bar from './bar'
+import ui from './ui'
 export default {
-  bar
+  ui
 }

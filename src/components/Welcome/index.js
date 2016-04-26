@@ -1,6 +1,6 @@
 import React, { View, Text, Image } from 'react-native'
 import Player from './../Player'
-import SideMenu from 'react-native-side-menu'
+import SideMenu from './../../scripts/containers/Sidebar'
 import Timeline from './../../scripts/containers/Timeline'
 
 const Welcome = () =>
@@ -24,17 +24,9 @@ const styles = {
         color: '#333333',
         marginBottom: 10
     }
-};
-
-class App extends React.Component {
-  render () {
-    const menu = <Timeline />
-    return (
-      <SideMenu menu={menu} isOpen>
-        <Welcome />
-      </SideMenu>
-    )
-  }
 }
 
-export default App;
+export default (props) =>
+  <SideMenu menu={<Timeline />}>
+    <Welcome />
+  </SideMenu>

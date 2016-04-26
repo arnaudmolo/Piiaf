@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
   }
 })
 
+const store = configureStore()
+
 export default class Piiaf extends Component {
 
   componentDidMount () {
@@ -42,10 +44,10 @@ export default class Piiaf extends Component {
    */
   render () {
     return (
-      <Provider store={ configureStore() }>
+      <Provider store={ store  }>
         <View style={styles.ctn}>
           <ExNavigator
-            initialRoute={ routes.getHomeRoute() }
+            initialRoute={ routes.getHomeRoute(store) }
             navigationBarStyle={styles.navigator}
             sceneStyle={styles.sceneStyle} />
         </View>
