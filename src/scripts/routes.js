@@ -1,5 +1,7 @@
 import React, { TouchableOpacity, View, Text, StyleSheet, Image, Button } from 'react-native'
-import ExNavigator from '@exponent/react-native-navigator'
+import Ex from '@exponent/react-native-navigator'
+import Timeline from './containers/Timeline'
+import { toggleMenu } from './actions/UiActions'
 
 const routes = {};
 
@@ -9,13 +11,16 @@ const styles = StyleSheet.create({
   }
 })
 
+const LeftButton = props =>
+  <Image source={require('./../components/Player/business.png')} style={{ width: 20, height: 20, left: 10, top: 10}} />
+
 const Title = () =>
   <Image source={require('./containers/logo-w.png')} style={{ width: 70, height: 20, top: 10}} />
 /**
  * Homepage
  *
  */
-routes.getHomeRoute = () => ({
+routes.getHomeRoute = (store) => ({
 
   getSceneClass() {
     return require('../components/Welcome/').default
@@ -24,26 +29,26 @@ routes.getHomeRoute = () => ({
   renderLeftButton(navigator) {
     return (
       <TouchableOpacity
-        touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
-        style={ExNavigator.Styles.barLeftButton}>
+        touchRetentionOffset={Ex.Styles.barButtonTouchRetentionOffset}
+        onPress={() => navigator.push(routes.getTimeline())}
+        style={Ex.Styles.barLeftButton}>
         <Image source={require('./../components/Player/business.png')} style={{ width: 20, height: 20, left: 10, top: 10}} />
       </TouchableOpacity>
-    );
+    )
   },
 
   renderRightButton(navigator) {
     return (
       <TouchableOpacity
-        touchRetentionOffset={ExNavigator.Styles.barButtonTouchRetentionOffset}
+        touchRetentionOffset={Ex.Styles.barButtonTouchRetentionOffset}
         onPress={() => navigator.push(routes.getListRoute())}
-        style={ExNavigator.Styles.barRightButton}>
+        style={Ex.Styles.barRightButton}>
         <Image source={require('./../components/Player/list.png')} style={{ width: 20, height: 20, right: 10, top: 10}} />
       </TouchableOpacity>
-    );
+    )
   },
 
   renderTitle: Title
-
 });
 
 routes.getListRoute = () => ({
@@ -53,9 +58,16 @@ routes.getListRoute = () => ({
   renderTitle: Title
 })
 
-routes.getArticles = () =>({
+routes.getArticles = () => ({
   getSceneClass () {
     return require('../components/Article').default
+  },
+  renderTitle: Title
+})
+
+routes.getTimeline = () => ({
+  getSceneClass () {
+    return Timeline
   },
   renderTitle: Title
 })
