@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import ExNavigator from '@exponent/react-native-navigator'
 import configureStore from '../configStore'
 import routes from '../routes'
+import Footer from '../../components/Footer'
 
 import SpashScreen from '@remobile/react-native-splashscreen'
 
@@ -34,7 +35,11 @@ const store = configureStore()
 export default class Piiaf extends Component {
 
   componentDidMount () {
-    SpashScreen.hide()
+    try {
+      SpashScreen.hide()
+    } catch (e) {
+      
+    }
   }
 
   /**
@@ -50,6 +55,7 @@ export default class Piiaf extends Component {
             initialRoute={ routes.getHomeRoute(store) }
             navigationBarStyle={styles.navigator}
             sceneStyle={styles.sceneStyle} />
+          <Footer />
         </View>
       </Provider>
     )

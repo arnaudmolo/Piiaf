@@ -22,7 +22,7 @@ const style = StyleSheet.create({
 const Timeline = (props) =>
   <View>
     <View style={[style.container, style.dropbottom]}>
-      <SegmentedControl values={['Titres précédents', 'Programme', 'Replay']} selectedIndex={0} onChange={(e) => console.log(e)} />
+      <SegmentedControl values={['Titres précédents', 'Programme', 'Replay']} selectedIndex={0} />
     </View>
     <List style={[style.container, style.list]} />
   </View>
