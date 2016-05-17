@@ -3,10 +3,15 @@ import Player from './../Player'
 import Sidebar from './../../scripts/containers/Sidebar'
 import Timeline from './../../scripts/containers/Timeline'
 
-const Welcome = () =>
-  <View style={ styles.container }>
-    <Player />
-  </View>
+const Welcome = (props) => {
+  return (
+    <View style={ styles.container }>
+      <Sidebar menu={<Timeline />} >
+        <Player />
+      </Sidebar>
+    </View>
+  )
+}
 
 const styles = {
   container: {

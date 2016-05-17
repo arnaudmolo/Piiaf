@@ -1,7 +1,6 @@
 import React, { TouchableOpacity, View, Text, StyleSheet, Image, Button } from 'react-native'
 import Ex from '@exponent/react-native-navigator'
 import Timeline from './containers/Timeline'
-import { toggleMenu } from './actions/UiActions'
 
 const routes = {};
 

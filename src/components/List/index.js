@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    paddingTop: 1,
-    paddingBottom: 1,
+    paddingTop: 2,
+    paddingBottom: 2,
     backgroundColor: gray,
     flex: 1
   },
