@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   text: {
-    fontSize: 40,
+    fontSize: 20,
     color: 'white'
   },
   big: {

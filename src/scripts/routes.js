@@ -15,6 +15,7 @@ const LeftButton = props =>
 
 const Title = () =>
   <Image source={require('./containers/logo-w.png')} style={{ width: 70, height: 20, top: 10}} />
+
 /**
  * Homepage
  *
