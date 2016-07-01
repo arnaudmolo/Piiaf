@@ -12,6 +12,14 @@ export default new class Routes {
   // they're lazily evaluated to prevent recursion
   // when the screens themselves use this Routes file.
 
+  get Player () {
+    return {
+      title: 'Player',
+      component: require('../Containers/Player').default,
+      leftButton: 'BACK'
+    }
+  }
+
   get ListviewGridExample () {
     return {
       title: 'Listview Grid Example',

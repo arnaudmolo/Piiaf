@@ -36,6 +36,10 @@ class PresentationScreen extends React.Component {
             </Text>
           </View>
 
+          <RoundedButton onPress={() => this.props.navigator.push(Routes.Player)}>
+            Open the player
+          </RoundedButton>
+
           <RoundedButton onPress={() => this.props.navigator.push(Routes.AllComponentsScreen)}>
             Component Examples Screen
           </RoundedButton>
