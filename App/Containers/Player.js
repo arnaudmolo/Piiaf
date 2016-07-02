@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { View, ScrollView, Text, LayoutAnimation, Keyboard } from 'react-native'
+import { View, ScrollView, Text, LayoutAnimation, Keyboard, NativeModules } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import Routes from '../Navigation/Routes'
@@ -8,6 +8,9 @@ import RoundedButton from '../Components/RoundedButton'
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
+
+
+const audio = NativeModules.RNAudioPlayerURL
 
 // Styles
 import styles from './Styles/PlayerStyle'
@@ -33,7 +36,6 @@ class Player extends React.Component {
     // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow.bind(this))
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide.bind(this))
-
     // Configure nav button
     this.props.navigator.state.tapHamburger = () => {
       this.props.navigator.drawer.toggle()
@@ -64,9 +66,9 @@ class Player extends React.Component {
 
   render () {
     return (
-      <ScrollView style={[styles.container]}>
+      <ScrollView style={styles.container}>
         <View style={styles.mainContainer}>
-          <RoundedButton onPress={() => console.log('play')}>
+          <RoundedButton onPress={this.play}>
             Play
           </RoundedButton>
         </View>

@@ -3,6 +3,7 @@ import API from '../Services/Api'
 import FixtureAPI from '../Services/FixtureApi'
 import { watchStartup } from './StartupSaga'
 import { watchLoginAttempt } from './LoginSaga'
+import { watchPlayer } from './PlayerSaga'
 import getCityWeather from './GetCityWeatherSaga'
 import DebugSettings from '../Config/DebugSettings'
 
@@ -17,4 +18,5 @@ export default function * root () {
   yield fork(watchStartup)
   yield fork(watchLoginAttempt)
   yield fork(getCityWeather(api).watcher)
+  yield fork(watchPlayer)
 }

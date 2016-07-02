@@ -17,6 +17,8 @@ const requestTemperature = (city) => ({ type: Types.TEMPERATURE_REQUEST, city })
 const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, temperature })
 const receiveTemperatureFailure = () => ({ type: Types.TEMPERATURE_FAILURE })
 
+const play = () => ({ type: Types.PLAY })
+
 /**
  Makes available all the action creators we've created.
  */
@@ -25,8 +27,9 @@ export default {
   loginSuccess,
   loginFailure,
   logout,
-  startup,
+  play,
   requestTemperature,
   receiveTemperature,
-  receiveTemperatureFailure
+  receiveTemperatureFailure,
+  startup
 }
