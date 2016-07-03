@@ -3,7 +3,7 @@ import API from '../Services/Api'
 import FixtureAPI from '../Services/FixtureApi'
 import { watchStartup } from './StartupSaga'
 import { watchLoginAttempt } from './LoginSaga'
-import { watchPlayer } from './PlayerSaga'
+import watchPlayer from './PlayerSaga'
 import getCityWeather from './GetCityWeatherSaga'
 import DebugSettings from '../Config/DebugSettings'
 

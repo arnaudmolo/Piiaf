@@ -15,4 +15,7 @@ export default createTypes(`
   TEMPERATURE_FAILURE
 
   PLAY
+  PAUSE
+  STOP
+  TOGGLE_PLAY
 `)

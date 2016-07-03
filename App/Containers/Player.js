@@ -1,16 +1,14 @@
 import React, { PropTypes } from 'react'
-import { View, ScrollView, Text, LayoutAnimation, Keyboard, NativeModules } from 'react-native'
+import { View, ScrollView, Text, LayoutAnimation, Keyboard } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import Routes from '../Navigation/Routes'
 import { Metrics } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
+import PlayerToggle from '../Components/PlayerToggle'
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
-
-
-const audio = NativeModules.RNAudioPlayerURL
 
 // Styles
 import styles from './Styles/PlayerStyle'
@@ -64,13 +62,11 @@ class Player extends React.Component {
     })
   }
 
-  render () {
+  render (props = this.props) {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.mainContainer}>
-          <RoundedButton onPress={this.play}>
-            Play
-          </RoundedButton>
+          <PlayerToggle playing={props.playing} onTouch={props.togglePlay} />
         </View>
       </ScrollView>
     )
@@ -78,8 +74,7 @@ class Player extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return state.player
 }
 
-export default connect(mapStateToProps)(Player)
+export default connect(mapStateToProps, {togglePlay: Actions.togglePlay})(Player)

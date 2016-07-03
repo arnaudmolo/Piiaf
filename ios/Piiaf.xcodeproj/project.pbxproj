@@ -31,6 +31,7 @@
 		73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D5F8D3D58F49ACB77445E0 /* libRNVectorIcons.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8E99CCCC1D26B76F005D69CE /* RNAudioPlayerURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */; };
+		8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF793091D282274000F767D /* AudioToolbox.framework */; };
 		B2610DB714204207BE3B9E43 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53DDBFA05A5E46329BEC0935 /* Foundation.ttf */; };
 		B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43D416D1F2B466789752360 /* libRNI18n.a */; };
 		BEACCA67021B42C7A4A50E12 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD0894CAB37149089B17DEFA /* Entypo.ttf */; };
@@ -177,6 +178,8 @@
 		869D2BB6EAF24478A0800F15 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		8E99CCCA1D26B76F005D69CE /* RNAudioPlayerURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAudioPlayerURL.h; sourceTree = "<group>"; };
 		8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAudioPlayerURL.m; sourceTree = "<group>"; };
+		8EF793091D282274000F767D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8EF7930B1D282274000F767D /* Piiaf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Piiaf.entitlements; path = Piiaf/Piiaf.entitlements; sourceTree = "<group>"; };
 		AF875132D91341D19914BDDD /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		B43D416D1F2B466789752360 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
 		BD0894CAB37149089B17DEFA /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				1C99ECD0E9CF441FAB6592F4 /* libRNDeviceInfo.a in Frameworks */,
+				8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */,
 				B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */,
 				73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */,
 			);
@@ -293,6 +297,7 @@
 		13B07FAE1A68108700A75B9A /* Piiaf */ = {
 			isa = PBXGroup;
 			children = (
+				8EF7930B1D282274000F767D /* Piiaf.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -351,6 +356,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8EF793091D282274000F767D /* AudioToolbox.framework */,
 				13B07FAE1A68108700A75B9A /* Piiaf */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PiiafTests */,
@@ -466,6 +472,14 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = HX2772FBHB;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -774,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Piiaf/Piiaf.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
@@ -800,6 +815,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Piiaf/Piiaf.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (

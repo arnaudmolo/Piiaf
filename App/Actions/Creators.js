@@ -18,6 +18,10 @@ const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, 
 const receiveTemperatureFailure = () => ({ type: Types.TEMPERATURE_FAILURE })
 
 const play = () => ({ type: Types.PLAY })
+const stop = () => ({ type: Types.STOP })
+const pause = () => ({ type: Types.PAUSE })
+
+const togglePlay = () => ({type: Types.TOGGLE_PLAY})
 
 /**
  Makes available all the action creators we've created.
@@ -27,7 +31,12 @@ export default {
   loginSuccess,
   loginFailure,
   logout,
+
   play,
+  stop,
+  pause,
+  togglePlay,
+
   requestTemperature,
   receiveTemperature,
   receiveTemperatureFailure,
