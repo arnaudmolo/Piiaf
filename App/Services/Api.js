@@ -3,7 +3,7 @@ import apisauce from 'apisauce'
 import Reactotron from 'reactotron'
 
 // our "constructor"
-const create = (baseURL = 'http://openweathermap.org/data/2.1') => {
+const create = (baseURL = 'http://piiaf.com') => {
   // ------
   // STEP 1
   // ------
@@ -44,8 +44,7 @@ const create = (baseURL = 'http://openweathermap.org/data/2.1') => {
   //
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
-  //
-  const getCity = (city) => api.get('/find/name', {q: city})
+  const getMusic = () => api.get('/xml/get?url=http%3A%2F%2F94.247.179.59%2Fxml%2F1.XML')
 
   // ------
   // STEP 3
@@ -61,7 +60,7 @@ const create = (baseURL = 'http://openweathermap.org/data/2.1') => {
   //
   return {
     // a list of the API functions from step 2
-    getCity,
+    getMusic,
     // additional utilities
     addMonitor
   }
