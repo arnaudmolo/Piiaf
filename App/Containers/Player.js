@@ -1,21 +1,14 @@
 import React, { PropTypes } from 'react'
-import { View, ScrollView, Text, LayoutAnimation, Keyboard, Image } from 'react-native'
+import { View, Text, LayoutAnimation, Keyboard, Image } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
-import Routes from '../Navigation/Routes'
 import { Metrics } from '../Themes'
-import RoundedButton from '../Components/RoundedButton'
 import PlayerToggle from '../Components/PlayerToggle'
 // external libs
-import Icon from 'react-native-vector-icons/FontAwesome'
-import Animatable from 'react-native-animatable'
-import { BlurView, VibrancyView } from 'react-native-blur'
+import { BlurView } from 'react-native-blur'
 
 // Styles
 import styles from './Styles/PlayerStyle'
-
-// I18n
-import I18n from '../I18n/I18n.js'
 
 class Player extends React.Component {
 
