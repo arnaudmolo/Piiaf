@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { View, ScrollView, Text, LayoutAnimation, Keyboard } from 'react-native'
+import { View, ScrollView, Text, LayoutAnimation, Keyboard, Image } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import Routes from '../Navigation/Routes'
@@ -9,6 +9,7 @@ import PlayerToggle from '../Components/PlayerToggle'
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
+import { BlurView, VibrancyView } from 'react-native-blur'
 
 // Styles
 import styles from './Styles/PlayerStyle'
@@ -63,12 +64,20 @@ class Player extends React.Component {
   }
 
   render (props = this.props) {
+    const uri = 'http://94.247.179.59/img/1.JPG?r=' + Math.random()
     return (
-      <ScrollView style={styles.container}>
-        <View style={styles.mainContainer}>
+      <View style={styles.container}>
+        <Image source={{uri}} style={styles.bluredView}>
+          <BlurView blurType='dark' style={styles.backgroundImage} />
+        </Image>
+        <View style={styles.playerContainer}>
+          <Image source={{uri}}
+            style={styles.image} />
+          <Text style={[styles.text, styles.big]} >Titre chanson</Text>
+          <Text style={styles.text} >Artiste</Text>
           <PlayerToggle playing={props.playing} onTouch={props.togglePlay} />
         </View>
-      </ScrollView>
+      </View>
     )
   }
 }

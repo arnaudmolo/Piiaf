@@ -73,15 +73,6 @@ RCT_EXPORT_METHOD(pause){
   [self.audioPlayer pause];
 }
 
-RCT_EXPORT_METHOD(resume)
-{
-  if (!self.audioPlayer) {
-    return;
-  } else {
-    [self.audioPlayer resume];
-  }
-}
-
 RCT_EXPORT_METHOD(seekToTime:(nonnull NSNumber *)toTime){
 	[self.audioPlayer seekToTime: CMTimeMakeWithSeconds([toTime floatValue], NSEC_PER_SEC)];
 }

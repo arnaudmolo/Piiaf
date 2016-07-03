@@ -17,7 +17,7 @@ export default class PlayerToggle extends React.Component {
 
   render (props = this.props) {
     return (
-      <View style={styles.container}>
+      <View style={styles.groupContainer}>
         <TouchableOpacity onPress={props.onTouch}>
           <Text style={[styles.text, props.playing && styles.big]}>ON</Text>
         </TouchableOpacity>

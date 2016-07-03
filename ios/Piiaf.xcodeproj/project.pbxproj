@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -22,6 +21,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		16126559D0674C4EBCD93ADA /* libRNBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53717AFF373D434F9BEEAC72 /* libRNBlur.a */; };
 		19F8B5FA857E48EFA454BDE2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF875132D91341D19914BDDD /* FontAwesome.ttf */; };
 		1C99ECD0E9CF441FAB6592F4 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135010778B884DEEBCBE7D12 /* libRNDeviceInfo.a */; };
 		2C22AAA25B8340908E0A80C1 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 869D2BB6EAF24478A0800F15 /* Octicons.ttf */; };
@@ -32,6 +32,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8E99CCCC1D26B76F005D69CE /* RNAudioPlayerURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */; };
 		8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF793091D282274000F767D /* AudioToolbox.framework */; };
+		8EF793671D297067000F767D /* DVEffectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793641D297067000F767D /* DVEffectsView.m */; };
+		8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793661D297067000F767D /* DVEffectsViewManager.m */; };
 		B2610DB714204207BE3B9E43 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53DDBFA05A5E46329BEC0935 /* Foundation.ttf */; };
 		B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43D416D1F2B466789752360 /* libRNI18n.a */; };
 		BEACCA67021B42C7A4A50E12 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD0894CAB37149089B17DEFA /* Entypo.ttf */; };
@@ -116,6 +118,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		8E1AB2CC1D2972D000460642 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B302B9F6169F42ADB42D003B /* RNBlur.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A68BD7BC1BC31318005F02DF;
+			remoteInfo = RNBlur;
+		};
 		8E99CCBF1D26B74F005D69CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2F20D2CC4A154B8597F65D65 /* RNDeviceInfo.xcodeproj */;
@@ -170,6 +179,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2F20D2CC4A154B8597F65D65 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		3785560CA3ED4128828ACBE9 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
+		53717AFF373D434F9BEEAC72 /* libRNBlur.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBlur.a; sourceTree = "<group>"; };
 		53DDBFA05A5E46329BEC0935 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		62C04613B53E4A03B629A5D6 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -180,7 +190,12 @@
 		8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAudioPlayerURL.m; sourceTree = "<group>"; };
 		8EF793091D282274000F767D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8EF7930B1D282274000F767D /* Piiaf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Piiaf.entitlements; path = Piiaf/Piiaf.entitlements; sourceTree = "<group>"; };
+		8EF793631D297067000F767D /* DVEffectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsView.h; sourceTree = "<group>"; };
+		8EF793641D297067000F767D /* DVEffectsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsView.m; sourceTree = "<group>"; };
+		8EF793651D297067000F767D /* DVEffectsViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsViewManager.h; sourceTree = "<group>"; };
+		8EF793661D297067000F767D /* DVEffectsViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsViewManager.m; sourceTree = "<group>"; };
 		AF875132D91341D19914BDDD /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		B302B9F6169F42ADB42D003B /* RNBlur.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBlur.xcodeproj; path = "../node_modules/react-native-blur/ios/RNBlur.xcodeproj"; sourceTree = "<group>"; };
 		B43D416D1F2B466789752360 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
 		BD0894CAB37149089B17DEFA /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		C5AF9F5C26764642946DB1D5 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -215,6 +230,7 @@
 				8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */,
 				B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */,
 				73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */,
+				16126559D0674C4EBCD93ADA /* libRNBlur.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +357,7 @@
 				2F20D2CC4A154B8597F65D65 /* RNDeviceInfo.xcodeproj */,
 				3785560CA3ED4128828ACBE9 /* RNI18n.xcodeproj */,
 				62C04613B53E4A03B629A5D6 /* RNVectorIcons.xcodeproj */,
+				B302B9F6169F42ADB42D003B /* RNBlur.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -356,6 +373,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8EF793621D297067000F767D /* DVEffects */,
 				8EF793091D282274000F767D /* AudioToolbox.framework */,
 				13B07FAE1A68108700A75B9A /* Piiaf */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -372,6 +390,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Piiaf.app */,
 				00E356EE1AD99517003FC87E /* PiiafTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E1AB2BF1D2972D000460642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E1AB2CD1D2972D000460642 /* libRNBlur.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +425,17 @@
 				8E99CCC91D26B74F005D69CE /* libRNVectorIcons.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8EF793621D297067000F767D /* DVEffects */ = {
+			isa = PBXGroup;
+			children = (
+				8EF793631D297067000F767D /* DVEffectsView.h */,
+				8EF793641D297067000F767D /* DVEffectsView.m */,
+				8EF793651D297067000F767D /* DVEffectsViewManager.h */,
+				8EF793661D297067000F767D /* DVEffectsViewManager.m */,
+			);
+			path = DVEffects;
 			sourceTree = "<group>";
 		};
 		DE64033FFC344E2E85DC1111 /* Resources */ = {
@@ -536,6 +573,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 8E1AB2BF1D2972D000460642 /* Products */;
+					ProjectRef = B302B9F6169F42ADB42D003B /* RNBlur.xcodeproj */;
+				},
+				{
 					ProductGroup = 8E99CCAE1D26B74F005D69CE /* Products */;
 					ProjectRef = 2F20D2CC4A154B8597F65D65 /* RNDeviceInfo.xcodeproj */;
 				},
@@ -627,6 +668,13 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		8E1AB2CD1D2972D000460642 /* libRNBlur.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNBlur.a;
+			remoteRef = 8E1AB2CC1D2972D000460642 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		8E99CCC01D26B74F005D69CE /* libRNDeviceInfo.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -716,7 +764,9 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				8E99CCCC1D26B76F005D69CE /* RNAudioPlayerURL.m in Sources */,
+				8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8EF793671D297067000F767D /* DVEffectsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +809,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piiaf.app/Piiaf";
@@ -775,6 +826,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -799,6 +851,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-i18n/RNI18n",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				INFOPLIST_FILE = Piiaf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -825,6 +878,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-i18n/RNI18n",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				INFOPLIST_FILE = Piiaf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -878,6 +932,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-i18n/RNI18n",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -921,6 +976,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-i18n/RNI18n",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
