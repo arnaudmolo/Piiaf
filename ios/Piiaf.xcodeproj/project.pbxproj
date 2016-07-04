@@ -30,13 +30,15 @@
 		5C30EB2882AE4145AE3B61DB /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED02076C968C46A4B2FC9378 /* Ionicons.ttf */; };
 		73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D5F8D3D58F49ACB77445E0 /* libRNVectorIcons.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8E99CCCC1D26B76F005D69CE /* RNAudioPlayerURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */; };
+		8E6E7E111D2B14ED0094300D /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E7E101D2B14ED0094300D /* AudioManager.m */; };
 		8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF793091D282274000F767D /* AudioToolbox.framework */; };
 		8EF793671D297067000F767D /* DVEffectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793641D297067000F767D /* DVEffectsView.m */; };
 		8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793661D297067000F767D /* DVEffectsViewManager.m */; };
 		B2610DB714204207BE3B9E43 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53DDBFA05A5E46329BEC0935 /* Foundation.ttf */; };
 		B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43D416D1F2B466789752360 /* libRNI18n.a */; };
+		BA59B3AB830357D937987132 /* libPods-PiiafTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351FA577E0C1EF79C427ECEB /* libPods-PiiafTests.a */; };
 		BEACCA67021B42C7A4A50E12 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD0894CAB37149089B17DEFA /* Entypo.ttf */; };
+		C3C52F31487B08789279DA15 /* libPods-Piiaf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A561608301239A8757CE22B /* libPods-Piiaf.a */; };
 		E0012FCB0AFF42EEB23858C3 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0567F24BB18445098A0CEA4D /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PiiafTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiiafTests.m; sourceTree = "<group>"; };
 		0567F24BB18445098A0CEA4D /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		0D9B67DE8AB9FFD514A24650 /* Pods-Piiaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piiaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piiaf/Pods-Piiaf.release.xcconfig"; sourceTree = "<group>"; };
 		135010778B884DEEBCBE7D12 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
@@ -177,7 +180,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Piiaf/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Piiaf/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1A561608301239A8757CE22B /* libPods-Piiaf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piiaf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20D2CC4A154B8597F65D65 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
+		351FA577E0C1EF79C427ECEB /* libPods-PiiafTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PiiafTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3785560CA3ED4128828ACBE9 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		53717AFF373D434F9BEEAC72 /* libRNBlur.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBlur.a; sourceTree = "<group>"; };
 		53DDBFA05A5E46329BEC0935 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -186,8 +191,9 @@
 		7CF799CC8E324F71A59BC92F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		869D2BB6EAF24478A0800F15 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		8E99CCCA1D26B76F005D69CE /* RNAudioPlayerURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAudioPlayerURL.h; sourceTree = "<group>"; };
-		8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAudioPlayerURL.m; sourceTree = "<group>"; };
+		8E5608499CC009CDCD03F48A /* Pods-PiiafTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiiafTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiiafTests/Pods-PiiafTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E6E7E0F1D2B14ED0094300D /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
+		8E6E7E101D2B14ED0094300D /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
 		8EF793091D282274000F767D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8EF7930B1D282274000F767D /* Piiaf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Piiaf.entitlements; path = Piiaf/Piiaf.entitlements; sourceTree = "<group>"; };
 		8EF793631D297067000F767D /* DVEffectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsView.h; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 		B43D416D1F2B466789752360 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
 		BD0894CAB37149089B17DEFA /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		C5AF9F5C26764642946DB1D5 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		DDC0F4B71E0E0A03429794E5 /* Pods-PiiafTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiiafTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiiafTests/Pods-PiiafTests.release.xcconfig"; sourceTree = "<group>"; };
+		E136C53B8166A1FDBCFCA23C /* Pods-Piiaf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piiaf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piiaf/Pods-Piiaf.debug.xcconfig"; sourceTree = "<group>"; };
 		ED02076C968C46A4B2FC9378 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		F0D5F8D3D58F49ACB77445E0 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				BA59B3AB830357D937987132 /* libPods-PiiafTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +240,7 @@
 				B74BAF083B614F4797A4CF75 /* libRNI18n.a in Frameworks */,
 				73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */,
 				16126559D0674C4EBCD93ADA /* libRNBlur.a in Frameworks */,
+				C3C52F31487B08789279DA15 /* libPods-Piiaf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +323,7 @@
 		13B07FAE1A68108700A75B9A /* Piiaf */ = {
 			isa = PBXGroup;
 			children = (
+				8E6E7E0E1D2B14ED0094300D /* Classes */,
 				8EF7930B1D282274000F767D /* Piiaf.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -331,6 +342,15 @@
 				146834041AC3E56700842450 /* libReact.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2B5548414195455E3FA0A243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A561608301239A8757CE22B /* libPods-Piiaf.a */,
+				351FA577E0C1EF79C427ECEB /* libPods-PiiafTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -380,6 +400,8 @@
 				00E356EF1AD99517003FC87E /* PiiafTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				DE64033FFC344E2E85DC1111 /* Resources */,
+				BD326C9363F2D4CA0B707D6C /* Pods */,
+				2B5548414195455E3FA0A243 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -400,6 +422,16 @@
 				8E1AB2CD1D2972D000460642 /* libRNBlur.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8E6E7E0E1D2B14ED0094300D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E6E7E0F1D2B14ED0094300D /* AudioManager.h */,
+				8E6E7E101D2B14ED0094300D /* AudioManager.m */,
+			);
+			name = Classes;
+			path = Piiaf/Classes;
 			sourceTree = "<group>";
 		};
 		8E99CCAE1D26B74F005D69CE /* Products */ = {
@@ -438,11 +470,20 @@
 			path = DVEffects;
 			sourceTree = "<group>";
 		};
+		BD326C9363F2D4CA0B707D6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E136C53B8166A1FDBCFCA23C /* Pods-Piiaf.debug.xcconfig */,
+				0D9B67DE8AB9FFD514A24650 /* Pods-Piiaf.release.xcconfig */,
+				8E5608499CC009CDCD03F48A /* Pods-PiiafTests.debug.xcconfig */,
+				DDC0F4B71E0E0A03429794E5 /* Pods-PiiafTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE64033FFC344E2E85DC1111 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E99CCCA1D26B76F005D69CE /* RNAudioPlayerURL.h */,
-				8E99CCCB1D26B76F005D69CE /* RNAudioPlayerURL.m */,
 				BD0894CAB37149089B17DEFA /* Entypo.ttf */,
 				7CF799CC8E324F71A59BC92F /* EvilIcons.ttf */,
 				AF875132D91341D19914BDDD /* FontAwesome.ttf */,
@@ -462,9 +503,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PiiafTests" */;
 			buildPhases = (
+				4D9AE0E21F1FE2B17D895352 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				0252A48B12861CA6BDA7D52E /* [CP] Embed Pods Frameworks */,
+				F01F25ED60CD880B4F33C890 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,10 +524,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Piiaf" */;
 			buildPhases = (
+				3F30D6D87D729442EA6A666A /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				9FFD34E3EEE33B8E8B1EEEDC /* [CP] Embed Pods Frameworks */,
+				E06C5E73913003B1EC3A756F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -747,6 +794,96 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		0252A48B12861CA6BDA7D52E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiiafTests/Pods-PiiafTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F30D6D87D729442EA6A666A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D9AE0E21F1FE2B17D895352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FFD34E3EEE33B8E8B1EEEDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piiaf/Pods-Piiaf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06C5E73913003B1EC3A756F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piiaf/Pods-Piiaf-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F01F25ED60CD880B4F33C890 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiiafTests/Pods-PiiafTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -763,9 +900,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				8E99CCCC1D26B76F005D69CE /* RNAudioPlayerURL.m in Sources */,
 				8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8E6E7E111D2B14ED0094300D /* AudioManager.m in Sources */,
 				8EF793671D297067000F767D /* DVEffectsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,6 +932,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5608499CC009CDCD03F48A /* Pods-PiiafTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -811,6 +949,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piiaf.app/Piiaf";
 			};
@@ -818,6 +960,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC0F4B71E0E0A03429794E5 /* Pods-PiiafTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -831,6 +974,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piiaf.app/Piiaf";
 			};
@@ -838,6 +985,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E136C53B8166A1FDBCFCA23C /* Pods-Piiaf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Piiaf/Piiaf.entitlements;
@@ -854,6 +1002,7 @@
 					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				INFOPLIST_FILE = Piiaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -866,6 +1015,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9B67DE8AB9FFD514A24650 /* Pods-Piiaf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Piiaf/Piiaf.entitlements;
@@ -881,6 +1031,7 @@
 					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 				);
 				INFOPLIST_FILE = Piiaf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
