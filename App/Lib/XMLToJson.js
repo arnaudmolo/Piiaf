@@ -1,39 +1,26 @@
-function xmlToJson(xml) {
+function parserCreator (balise) {
+  return function (xml) {
+    const res = xml.substring(xml.indexOf(`<${balise}>`) + balise.length + 2, xml.indexOf(`</${balise}>`))
+    return res[0] !== '<' && res
+  }
+}
 
-	// Create the return object
-	var obj = {};
+const getTitre = parserCreator('titre')
+const getArtiste = parserCreator('artiste')
+const getAlbum = parserCreator('album')
+const getUrl = parserCreator('url')
+const getDuree = parserCreator('duree')
 
-	if (xml.nodeType == 1) { // element
-		// do attributes
-		if (xml.attributes.length > 0) {
-		obj["@attributes"] = {};
-			for (var j = 0; j < xml.attributes.length; j++) {
-				var attribute = xml.attributes.item(j);
-				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
-			}
-		}
-	} else if (xml.nodeType == 3) { // text
-		obj = xml.nodeValue;
-	}
+const castNumb = n => n && +n
 
-	// do children
-	if (xml.hasChildNodes()) {
-		for(var i = 0; i < xml.childNodes.length; i++) {
-			var item = xml.childNodes.item(i);
-			var nodeName = item.nodeName;
-			if (typeof(obj[nodeName]) == "undefined") {
-				obj[nodeName] = xmlToJson(item);
-			} else {
-				if (typeof(obj[nodeName].push) == "undefined") {
-					var old = obj[nodeName];
-					obj[nodeName] = [];
-					obj[nodeName].push(old);
-				}
-				obj[nodeName].push(xmlToJson(item));
-			}
-		}
-	}
-	return obj;
+function xmlToJson (xml) {
+  return {
+    title: getTitre(xml),
+    artist: getArtiste(xml),
+    album: getAlbum(xml),
+    url: getUrl(xml),
+    duration: castNumb(getDuree(xml))
+  }
 }
 
 export default xmlToJson

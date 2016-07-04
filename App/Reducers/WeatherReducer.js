@@ -35,7 +35,7 @@ const failure = (state, action) =>
 
 // map our types to our handlers
 const ACTION_HANDLERS = {
-  [Types.TEMPERATURE_REQUEST]: request,
+  [Types.MUSIC_DESCRIPTION_REQUEST]: request,
   [Types.TEMPERATURE_RECEIVE]: receive,
   [Types.TEMPERATURE_FAILURE]: failure
 }

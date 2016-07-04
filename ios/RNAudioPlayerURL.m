@@ -60,7 +60,6 @@ RCT_EXPORT_METHOD(setCategory:(nonnull NSNumber*)key withValue:(NSString*)catego
 RCT_EXPORT_METHOD(iosControll:(RCTResponseSenderBlock)callback){
   MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
   [commandCenter.togglePlayPauseCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent * _Nonnull event) {
-    NSLog(@"Bien loggué");
     return MPRemoteCommandHandlerStatusSuccess;
   }];
 }
@@ -75,6 +74,17 @@ RCT_EXPORT_METHOD(pause){
 
 RCT_EXPORT_METHOD(seekToTime:(nonnull NSNumber *)toTime){
 	[self.audioPlayer seekToTime: CMTimeMakeWithSeconds([toTime floatValue], NSEC_PER_SEC)];
+}
+
+RCT_EXPORT_METHOD(setPlayingInfo: (NSDictionary *)songDescription) {
+//  UIImage *albumImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:songDescription[@"cover"]]]];
+//  MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc]initWithImage:albumImage];
+  MPNowPlayingInfoCenter *playingInfo = [MPNowPlayingInfoCenter defaultCenter];
+  playingInfo.nowPlayingInfo = @{
+                                MPMediaItemPropertyTitle: songDescription[@"title"],
+                                MPMediaItemPropertyArtist: songDescription[@"artist"]
+                              };
+  
 }
 
 @end

@@ -66,8 +66,8 @@ class Player extends React.Component {
         <View style={styles.playerContainer}>
           <Image source={{uri}}
             style={styles.image} />
-          <Text style={[styles.text, styles.big]} >Titre chanson</Text>
-          <Text style={styles.text} >Artiste</Text>
+          <Text style={[styles.text, styles.big]} >{props.description.titre}</Text>
+          <Text style={styles.text} >{props.description.artist}</Text>
           <PlayerToggle playing={props.playing} onTouch={props.togglePlay} />
         </View>
       </View>

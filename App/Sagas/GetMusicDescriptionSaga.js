@@ -1,4 +1,5 @@
-import {take, call, put} from 'redux-saga/effects'
+import {take, takem, call, put} from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import R from 'ramda'
 import Types from '../Actions/Types'
 import Actions from '../Actions/Creators'
@@ -25,18 +26,12 @@ export default (api) => {
 
     // success?
     if (response.ok) {
-      console.log('okkkkkkkkk')
-      const data = XMLToJson(response.data)
-      console.log(data)
-      // const kelvin = R.path(['list', 0, 'main', 'temp'], response.data)
-      // const celcius = kelvin - 273.15
-      // const farenheit = (celcius * 1.8000) + 32
-      //
-      // if (I18n.t('tempIndicator') === 'F') {
-      //   yield put(Actions.receiveTemperature(Math.round(farenheit)))
-      // } else {
-      //   yield put(Actions.receiveTemperature(Math.round(celcius)))
-      // }
+      const data = {
+        ...XMLToJson(response.data),
+        cover: 'http://94.247.179.59/img/1.JPG?r=' + Math.random()
+      }
+      yield put(Actions.receiveMusicDescription(data))
+      yield delay(500)
     } else {
       // yield put(Actions.receiveTemperatureFailure())
     }
@@ -49,14 +44,12 @@ export default (api) => {
   // a few things:
   //
   // 1.  Goes into a loop to ensure it stays alive.
-  // 2.  Listens for TEMPERATURE_REQUEST redux events
+  // 2.  Listens for MUSIC_DESCRIPTION_REQUEST redux events
   // 3.  Unpacks the action.
   // 4.  Calls the worker (above) to do the job.
   function * watcher () {
     while (true) {
-      const action = yield take(Types.TEMPERATURE_REQUEST)
-      const { city } = action
-      yield call(worker, city)
+      yield call(worker)
     }
   }
 

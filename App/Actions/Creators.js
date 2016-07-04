@@ -13,9 +13,12 @@ const logout = () => ({ type: Types.LOGOUT })
 
 const startup = () => ({ type: Types.STARTUP })
 
-const requestTemperature = (city) => ({ type: Types.TEMPERATURE_REQUEST, city })
-const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, temperature })
-const receiveTemperatureFailure = () => ({ type: Types.TEMPERATURE_FAILURE })
+const requestMusicDescription = (city) =>
+  ({ type: Types.MUSIC_DESCRIPTION_REQUEST, city: console.log('requestMusicDescription') })
+const receiveMusicDescription = (description) =>
+  ({ type: Types.MUSIC_DESCRIPTION_RECEIVE, payload: description })
+const receiveMusicDescriptionFailure = () =>
+  ({ type: Types.MUSIC_DESCRIPTION_FAILURE })
 
 const play = () => ({ type: Types.PLAY })
 const stop = () => ({ type: Types.STOP })
@@ -37,8 +40,8 @@ export default {
   pause,
   togglePlay,
 
-  requestTemperature,
-  receiveTemperature,
-  receiveTemperatureFailure,
+  requestMusicDescription,
+  receiveMusicDescription,
+  receiveMusicDescriptionFailure,
   startup
 }

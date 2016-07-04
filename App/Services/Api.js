@@ -3,7 +3,7 @@ import apisauce from 'apisauce'
 import Reactotron from 'reactotron'
 
 // our "constructor"
-const create = (baseURL = 'http://piiaf.com') => {
+const create = (baseURL = 'http://94.247.179.59') => {
   // ------
   // STEP 1
   // ------
@@ -44,7 +44,7 @@ const create = (baseURL = 'http://piiaf.com') => {
   //
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
-  const getMusic = () => api.get('/xml/get?url=http%3A%2F%2F94.247.179.59%2Fxml%2F1.XML')
+  const getMusic = () => api.get('/xml/1.XML')
 
   // ------
   // STEP 3

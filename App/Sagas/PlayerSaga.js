@@ -38,11 +38,16 @@ function * toggle () {
   return yield put(Actions.play())
 }
 
+function * setPlayer (action) {
+  Audio.setPlayingInfo(action.payload)
+}
+
 export default function * watchPlayer () {
   return yield [
     takeEvery(Types.PLAY, play),
     takeEvery(Types.PAUSE, pause),
     takeEvery(Types.STOP, stop),
-    takeEvery(Types.TOGGLE_PLAY, toggle)
+    takeEvery(Types.TOGGLE_PLAY, toggle),
+    takeEvery(Types.MUSIC_DESCRIPTION_RECEIVE, setPlayer)
   ]
 }
