@@ -14,7 +14,7 @@ const logout = () => ({ type: Types.LOGOUT })
 const startup = () => ({ type: Types.STARTUP })
 
 const requestMusicDescription = (city) =>
-  ({ type: Types.MUSIC_DESCRIPTION_REQUEST, city: console.log('requestMusicDescription') })
+  ({ type: Types.MUSIC_DESCRIPTION_REQUEST})
 const receiveMusicDescription = (description) =>
   ({ type: Types.MUSIC_DESCRIPTION_RECEIVE, payload: description })
 const receiveMusicDescriptionFailure = () =>

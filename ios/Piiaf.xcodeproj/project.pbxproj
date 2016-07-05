@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -30,7 +31,7 @@
 		5C30EB2882AE4145AE3B61DB /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED02076C968C46A4B2FC9378 /* Ionicons.ttf */; };
 		73A6E0630B7F4DFD921B1FB1 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D5F8D3D58F49ACB77445E0 /* libRNVectorIcons.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8E6E7E111D2B14ED0094300D /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E7E101D2B14ED0094300D /* AudioManager.m */; };
+		8EA51DE11D2B17A000AD92C4 /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA51DE01D2B17A000AD92C4 /* AudioManager.m */; };
 		8EF7930A1D282274000F767D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF793091D282274000F767D /* AudioToolbox.framework */; };
 		8EF793671D297067000F767D /* DVEffectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793641D297067000F767D /* DVEffectsView.m */; };
 		8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF793661D297067000F767D /* DVEffectsViewManager.m */; };
@@ -192,8 +193,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		869D2BB6EAF24478A0800F15 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		8E5608499CC009CDCD03F48A /* Pods-PiiafTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiiafTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiiafTests/Pods-PiiafTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E6E7E0F1D2B14ED0094300D /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
-		8E6E7E101D2B14ED0094300D /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
+		8EA51DDF1D2B17A000AD92C4 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = Piiaf/Classes/AudioManager.h; sourceTree = "<group>"; };
+		8EA51DE01D2B17A000AD92C4 /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioManager.m; path = Piiaf/Classes/AudioManager.m; sourceTree = "<group>"; };
 		8EF793091D282274000F767D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8EF7930B1D282274000F767D /* Piiaf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Piiaf.entitlements; path = Piiaf/Piiaf.entitlements; sourceTree = "<group>"; };
 		8EF793631D297067000F767D /* DVEffectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsView.h; sourceTree = "<group>"; };
@@ -323,7 +324,6 @@
 		13B07FAE1A68108700A75B9A /* Piiaf */ = {
 			isa = PBXGroup;
 			children = (
-				8E6E7E0E1D2B14ED0094300D /* Classes */,
 				8EF7930B1D282274000F767D /* Piiaf.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -364,6 +364,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8EA51DDF1D2B17A000AD92C4 /* AudioManager.h */,
+				8EA51DE01D2B17A000AD92C4 /* AudioManager.m */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -422,16 +424,6 @@
 				8E1AB2CD1D2972D000460642 /* libRNBlur.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8E6E7E0E1D2B14ED0094300D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8E6E7E0F1D2B14ED0094300D /* AudioManager.h */,
-				8E6E7E101D2B14ED0094300D /* AudioManager.m */,
-			);
-			name = Classes;
-			path = Piiaf/Classes;
 			sourceTree = "<group>";
 		};
 		8E99CCAE1D26B74F005D69CE /* Products */ = {
@@ -547,7 +539,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -902,7 +894,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				8EF793681D297067000F767D /* DVEffectsViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				8E6E7E111D2B14ED0094300D /* AudioManager.m in Sources */,
+				8EA51DE11D2B17A000AD92C4 /* AudioManager.m in Sources */,
 				8EF793671D297067000F767D /* DVEffectsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -953,6 +945,7 @@
 					"$(inherited)",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piiaf.app/Piiaf";
 			};
@@ -978,6 +971,7 @@
 					"$(inherited)",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piiaf.app/Piiaf";
 			};
@@ -1008,6 +1002,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Piiaf;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1037,6 +1032,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Piiaf;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1062,6 +1058,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

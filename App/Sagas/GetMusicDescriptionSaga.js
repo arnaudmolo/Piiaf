@@ -31,7 +31,7 @@ export default (api) => {
         cover: 'http://94.247.179.59/img/1.JPG?r=' + Math.random()
       }
       yield put(Actions.receiveMusicDescription(data))
-      yield delay(500)
+      yield delay(data.duration)
     } else {
       // yield put(Actions.receiveTemperatureFailure())
     }

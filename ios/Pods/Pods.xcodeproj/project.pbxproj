@@ -23,6 +23,7 @@
 		8599954369F194FE91440BBF6CB29CD8 /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B301BEED56A5014D1255792898D4252 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */; };
 		8C2D5B9266CA4479D5D2B6FB78047A39 /* StreamingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */; };
+		8EA51DE21D2B180700AD92C4 /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBAC6B12C237F87636F9E76C2115B1B /* libStreamingKit.a */; };
 		97D8358F7596F16128DD34B0AB57182F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */; };
 		98BCA9F84E19F17C5006B3448858B443 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		99A4FA80F62CBA47631915402403D9A7 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -99,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA51DE21D2B180700AD92C4 /* libStreamingKit.a in Frameworks */,
 				B8F25B759DF3025CA492BDE68B5288EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

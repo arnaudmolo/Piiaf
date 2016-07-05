@@ -8,7 +8,7 @@
 
 @implementation AudioManager
 
-#define LPN_AUDIO_STREAM_URL @"http://stream.lumpen.fm:7416/;stream/1"
+#define LPN_AUDIO_STREAM_URL @"http://ns3388562.ip-46-105-106.eu:8000/radiopiiaf-192.mp3"
 #define LPN_AUDIO_BUFFER_SEC 20
 
 @synthesize bridge = _bridge;
@@ -292,8 +292,7 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
 
 - (void)setNowPlayingInfo
 {
-  MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc]initWithImage:[UIImage imageNamed:@"RadioLogo"]];
-  NSDictionary *nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:@"WLPN 105.5 FM Chicago", MPMediaItemPropertyAlbumTitle, @"", MPMediaItemPropertyAlbumArtist, @"Lumpen Radio", MPMediaItemPropertyTitle, artwork, MPMediaItemPropertyArtwork, nil];
+  NSDictionary *nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:@"WLPN 105.5 FM Chicago", MPMediaItemPropertyAlbumTitle, @"", MPMediaItemPropertyAlbumArtist, @"Lumpen Radio", MPMediaItemPropertyTitle, nil, MPMediaItemPropertyArtwork, nil];
   [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
 }
 
