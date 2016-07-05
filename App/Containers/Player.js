@@ -69,6 +69,7 @@ class Player extends React.Component {
           <Text style={[styles.text, styles.big]} >{props.description.titre}</Text>
           <Text style={styles.text} >{props.description.artist}</Text>
           <PlayerToggle playing={props.playing} onTouch={props.togglePlay} />
+          {!props.playing && <Text style={styles.text} >{props.status === 'buffering' ? 'Trying to connect...' : props.status}</Text>}
         </View>
       </View>
     )
@@ -76,6 +77,7 @@ class Player extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state.player)
   return state.player
 }
 

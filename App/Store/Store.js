@@ -10,6 +10,10 @@ import Reactotron from 'reactotron'
 import RehydrationServices from '../Services/RehydrationServices'
 import ReduxPersist from '../Config/ReduxPersist'
 
+import { NativeAppEventEmitter } from 'react-native'
+import { AudioManager as Audio } from 'NativeModules'
+import Actions from '../Actions/Creators'
+
 // the logger master switch
 const USE_LOGGING = Config.reduxLogging
 // silence these saga-based messages
@@ -27,6 +31,27 @@ middleware.push(sagaMiddleware)
 if (__DEV__) {
   middleware.push(logger)
 }
+
+const audioMid = store => {
+  const listener = reminder => {
+    if (Actions[reminder.status.toLowerCase()]) {
+      return store.dispatch(Actions[reminder.status.toLowerCase()]())
+    }
+    console.warn('No action for AudioBridgeEvent')
+  }
+
+  Audio.getStatus((_, status) => {
+    listener(status)
+  })
+
+  NativeAppEventEmitter.addListener(
+    'AudioBridgeEvent',
+    listener
+  )
+  return next => action => next(action)
+}
+
+middleware.push(audioMid)
 
 // a function which can create our store and auto-persist the data
 export default () => {

@@ -26,6 +26,13 @@ const pause = () => ({ type: Types.PAUSE })
 
 const togglePlay = () => ({type: Types.TOGGLE_PLAY})
 
+
+const playing = () => ({ type: Types.PLAYING })
+const paused = () => ({ type: Types.PAUSED })
+const stopped = () => ({ type: Types.STOPPED })
+const buffering = () => ({ type: Types.BUFFERING })
+const error = () => ({ type: Types.ERROR })
+
 /**
  Makes available all the action creators we've created.
  */
@@ -39,9 +46,14 @@ export default {
   stop,
   pause,
   togglePlay,
+  playing,
+  paused,
+  stopped,
+  buffering,
+  error,
 
   requestMusicDescription,
   receiveMusicDescription,
   receiveMusicDescriptionFailure,
-  startup
+  startup,
 }

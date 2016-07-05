@@ -18,4 +18,10 @@ export default createTypes(`
   PAUSE
   STOP
   TOGGLE_PLAY
+
+  PLAYING
+  PAUSED
+  STOPPED
+  BUFFERING
+  ERROR
 `)

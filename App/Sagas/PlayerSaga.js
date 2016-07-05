@@ -1,5 +1,6 @@
 import { takeEvery } from 'redux-saga'
 import { take, put, call, select } from 'redux-saga/effects'
+import { connect } from 'react-redux'
 import Types from '../Actions/Types'
 import Actions from '../Actions/Creators'
 import { NativeModules, NativeAppEventEmitter } from 'react-native'
@@ -31,29 +32,6 @@ function * setPlayer (action) {
 }
 
 export default function * watchPlayer () {
-  NativeAppEventEmitter.addListener(
-    'AudioBridgeEvent',
-    (reminder) => {
-      switch (reminder.status) {
-        case 'PLAYING':
-
-          break;
-        case 'PAUSED':
-
-          break;
-        case 'STOPPED':
-
-          break;
-        case 'BUFFERING':
-
-          break;
-        case 'ERROR':
-
-          break;
-      }
-    }
-  )
-
   return yield [
     takeEvery(Types.PLAY, play),
     takeEvery(Types.PAUSE, pause),
