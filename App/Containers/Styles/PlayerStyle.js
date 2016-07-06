@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native'
-import { ApplicationStyles } from '../../Themes/'
+import { ApplicationStyles, Metrics } from '../../Themes/'
 
 const {height, width} = Dimensions.get('window')
 
@@ -33,6 +33,9 @@ export default StyleSheet.create({
   playerContainer: {
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  slider: {
+    width: Metrics.screenWidth - 100
   },
   big: {
     fontSize: 20,

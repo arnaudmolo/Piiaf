@@ -2,7 +2,6 @@ import { fork } from 'redux-saga/effects'
 import API from '../Services/Api'
 import FixtureAPI from '../Services/FixtureApi'
 import { watchStartup } from './StartupSaga'
-import { watchLoginAttempt } from './LoginSaga'
 import watchPlayer from './PlayerSaga'
 import getMusicDescription from './GetMusicDescriptionSaga'
 import DebugSettings from '../Config/DebugSettings'
@@ -16,7 +15,6 @@ const api = DebugSettings.useFixtures ? FixtureAPI : API.create()
 // start the daemons
 export default function * root () {
   yield fork(watchStartup)
-  yield fork(watchLoginAttempt)
   yield fork(getMusicDescription(api).watcher)
   yield fork(watchPlayer)
 }

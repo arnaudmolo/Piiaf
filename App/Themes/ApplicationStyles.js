@@ -54,8 +54,8 @@ const ApplicationStyles = {
   groupContainer: {
     margin: 5,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: 100
   },
   sectionTitle: {
     ...Fonts.style.h4,
@@ -68,6 +68,11 @@ const ApplicationStyles = {
     borderColor: Colors.ember,
     alignItems: 'center',
     textAlign: 'center'
+  },
+  sectionTitleImage: {
+    width: 70,
+    height: 20,
+    top: 10
   }
 }
 

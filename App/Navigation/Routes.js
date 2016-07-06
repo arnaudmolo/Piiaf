@@ -1,7 +1,10 @@
-import { Transitions } from '../Themes/'
+import { Transitions, Images, ApplicationStyles } from '../Themes/'
+import { Image } from 'react-native'
+import React from 'react'
 
 // I18n
 import I18n from '../I18n/I18n.js'
+console.log(Images.logo)
 
 export default new class Routes {
 
@@ -14,9 +17,8 @@ export default new class Routes {
 
   get Player () {
     return {
-      title: 'Player',
+      title: <Image source={Images.logo} style={ApplicationStyles.sectionTitleImage} />,
       component: require('../Containers/Player').default,
-      leftButton: 'BACK'
     }
   }
 

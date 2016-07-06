@@ -1,7 +1,6 @@
 import {take, takem, call, put} from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import R from 'ramda'
-import Types from '../Actions/Types'
 import Actions from '../Actions/Creators'
 import XMLToJson from '../Lib/XMLToJson'
 

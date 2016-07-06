@@ -16,12 +16,15 @@ export default class PlayerToggle extends React.Component {
   // }
 
   render (props = this.props) {
+    const style = {
+      flex: 1
+    }
     return (
       <View style={styles.groupContainer}>
-        <TouchableOpacity onPress={props.onTouch}>
+        <TouchableOpacity style={style} onPress={props.onTouch}>
           <Text style={[styles.text, props.playing && styles.big]}>ON</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={props.onTouch}>
+        <TouchableOpacity style={style} onPress={props.onTouch}>
           <Text style={[styles.text, !props.playing && styles.big]}>OFF</Text>
         </TouchableOpacity>
       </View>

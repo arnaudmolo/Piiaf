@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { View, Text, LayoutAnimation, Keyboard, Image } from 'react-native'
+import { View, Text, LayoutAnimation, Keyboard, Image, Slider } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import { Metrics } from '../Themes'
@@ -57,7 +57,7 @@ class Player extends React.Component {
   }
 
   render (props = this.props) {
-    const uri = 'http://94.247.179.59/img/1.JPG?r=' + Math.random()
+    const uri = 'http://94.247.179.59/img/1.JPG?r=' + props.description.titre
     return (
       <View style={styles.container}>
         <Image source={{uri}} style={styles.bluredView}>
@@ -68,7 +68,10 @@ class Player extends React.Component {
             style={styles.image} />
           <Text style={[styles.text, styles.big]} >{props.description.titre}</Text>
           <Text style={styles.text} >{props.description.artist}</Text>
-          <PlayerToggle playing={props.playing} onTouch={props.togglePlay} />
+          <Slider
+            style={styles.slider}
+            onValueChange={(value) => console.log(value)} />
+          <PlayerToggle style={{width: 100}} playing={props.playing} onTouch={props.togglePlay} />
           {!props.playing && <Text style={styles.text} >{props.status === 'buffering' ? 'Trying to connect...' : props.status}</Text>}
         </View>
       </View>
