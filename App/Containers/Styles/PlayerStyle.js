@@ -35,7 +35,9 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   slider: {
-    width: Metrics.screenWidth - 100
+    height: 30,
+    width: Metrics.screenWidth - 100,
+    marginLeft: 7
   },
   big: {
     fontSize: 20,

@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react'
-import { View, Text, LayoutAnimation, Keyboard, Image, Slider } from 'react-native'
+import { View, Text, LayoutAnimation, Keyboard, Image } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import { Metrics } from '../Themes'
 import PlayerToggle from '../Components/PlayerToggle'
+import VolumeSlider from 'react-native-volume-slider'
 // external libs
 import { BlurView } from 'react-native-blur'
 
@@ -68,9 +69,15 @@ class Player extends React.Component {
             style={styles.image} />
           <Text style={[styles.text, styles.big]} >{props.description.titre}</Text>
           <Text style={styles.text} >{props.description.artist}</Text>
-          <Slider
+          <VolumeSlider
             style={styles.slider}
-            onValueChange={(value) => console.log(value)} />
+            thumbSize={{
+              width: 8,
+              height: 8
+            }}
+            thumbTintColor='rgb(146,146,157)'
+            minimumTrackTintColor='rgb(146,146,157)'
+            maximumTrackTintColor='rgba(255,255,255, 0.1)' />
           <PlayerToggle style={{width: 100}} playing={props.playing} onTouch={props.togglePlay} />
           {!props.playing && <Text style={styles.text} >{props.status === 'buffering' ? 'Trying to connect...' : props.status}</Text>}
         </View>
